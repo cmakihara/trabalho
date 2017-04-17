@@ -149,22 +149,11 @@ private PreparedStatement getPreparedStatementForInset(Connection con, Object ob
 		}
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		
 	}
 	sb.append(')');
 
 	String strSql = sb.toString();
-	System.out.println("SQL GERADO: " + strSql);		//	SQl de insert
-
+	System.out.println("SQL GERADO: " + strSql);
 	PreparedStatement ps = null;
 	try {
 		ps = con.prepareStatement(strSql);

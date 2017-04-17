@@ -38,7 +38,7 @@ public class Busca implements Banco {
 		@Override
 		public List<Carro> carregarTodos() {
 			 List<Carro> lista = new ArrayList<>();
-		        String sql = "select * from aluno";
+		        String sql = "select * from carro";
 		        PreparedStatement ps;
 		        try {
 		            
@@ -48,8 +48,8 @@ public class Busca implements Banco {
 		                Carro c = new Carro();
 		                c.setId(rs.getInt(1));
 		                c.setNome(rs.getString(2));
-		                //c.setAno(rs.getString(3));
-		               // c.setValor(rs.getString(4));
+		                c.setAno(0);
+		               // c.setValor(0);
 		                lista.add(c);
 		            }
 		            
